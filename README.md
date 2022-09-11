@@ -53,3 +53,17 @@ Images:
 89M     dashboard-2.6.1-amd64.txz
 ```
 
+## Installing a container runtime
+
+## Installing kubeadm, kubelet and kubectl
+
+## Preparing the required container images
+
+## Configuring container runtime
+
+## Initializing your control-plane node
+
+## Joining your (worker) nodes
+
+## Kubernetes Dashboard
+
