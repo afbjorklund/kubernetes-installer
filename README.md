@@ -97,8 +97,10 @@ Low-level client:
 Runtime dependency:
 `/usr/local/sbin/runc`
 
-`sudo systemctl daemon-reload`
-`sudo systemctl enable --now containerd`
+```shell
+sudo systemctl daemon-reload
+sudo systemctl enable --now containerd
+```
 
 Verify that containerd is running and that cri plugin is enabled:
 
@@ -200,14 +202,18 @@ kubeadm config images pull
 
 ### Uncompressing images before recompressing
 
-`kubeadm config images list --kubernetes-version=v1.25.0 > images.txt`
-`xargs -I % sudo ctr -n k8s.io image convert --uncompress % % < images.txt`
+```shell
+kubeadm config images list --kubernetes-version=v1.25.0 > images.txt
+xargs -I % sudo ctr -n k8s.io image convert --uncompress % % < images.txt
+```
 
 ### Saving all images to a compressed archive
 
-`xargs sudo ctr -n k8s.io images export - < images.txt > images.tar`
-`pigz < images.tar > images.tgz`
-`pixz < images.tar > images.txz`
+```shell
+xargs sudo ctr -n k8s.io images export - < images.txt > images.tar
+pigz < images.tar > images.tgz
+pixz < images.tar > images.txz
+```
 
 ```
 203M    images-1.25.0-amd64.tgz
@@ -216,10 +222,12 @@ kubeadm config images pull
 
 ### Loading all images from a compressed archive
 
-`cat images.txt`
-`zcat images.tgz > images.tar`
-`xzcat images.txz > images.tar`
-`sudo ctr -n k8s.io images import - < images.tar`
+```shell
+cat images.txt
+zcat images.tgz > images.tar
+xzcat images.txz > images.tar
+sudo ctr -n k8s.io images import - < images.tar
+```
 
 ```
 unpacking registry.k8s.io/kube-apiserver:v1.25.0 (sha256:aa556e212aaf21f935c369b292fbd03c9b75f3506c6332dd0368eea486bfce31)...done
@@ -260,7 +268,7 @@ $ sudo sysctl --system
 ### Configuring the systemd cgroup driver
 
 /etc/containerd/config.toml
-```
+```toml
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
 ```
