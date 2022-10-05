@@ -37,12 +37,12 @@ Packages:
 ```
 768K    cni-plugin-flannel-1.1.0-amd64.txz
 23M     cni-plugins-1.1.1-amd64.txz
-30M     containerd-1.6.6-amd64.txz
+30M     containerd-1.6.8-amd64.txz
 12M     crictl-1.24.2-amd64.txz
 8.8M    kubeadm-1.25.0-amd64.txz
 9.1M    kubectl-1.25.0-amd64.txz
 19M     kubelet-1.25.0-amd64.txz
-2.6M    runc-1.1.3-amd64.txz
+2.6M    runc-1.1.4-amd64.txz
 104M    total
 ```
 
