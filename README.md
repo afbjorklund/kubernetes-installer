@@ -11,6 +11,34 @@ Requirements:
   - 2 GiB or more of memory
   - 20 GiB or more of storage
 
+
+\* in Kubernetes, 1 "core" means 1 vCPU or 1 thread
+
+Normally it is the same as seen in `nproc` or `loadavg`.
+
+Example output from `lscpu`, from a quad-core computer:
+
+```
+CPU(s):                          8
+On-line CPU(s) list:             0-7
+Thread(s) per core:              2
+Core(s) per socket:              4
+Socket(s):                       1
+```
+
+Each core is 1000 millicores, and each GiB is 1024 MiB.
+
+Not all memory is seen in _total_, and even less _available_.
+
+Example output from `free`, from a machine with 4 GiB:
+
+```console
+$ free -m
+               total        used        free      shared  buff/cache   available
+Mem:            3927         132        3348           3         445        3577
+Swap:              0           0           0
+```
+
 Components:
 
 1) Container runtime [required]
