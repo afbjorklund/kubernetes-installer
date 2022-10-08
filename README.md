@@ -273,6 +273,8 @@ $ sudo sysctl --system
     SystemdCgroup = true
 ```
 
+Otherwise the cluster will crash after five minutes.
+
 ### Overriding the sandbox (pause) image
 
 /etc/containerd/config.toml
@@ -280,6 +282,8 @@ $ sudo sysctl --system
 [plugins."io.containerd.grpc.v1.cri"]
   sandbox_image = "registry.k8s.io/pause:3.8"
 ```
+
+Otherwise you will end up with multiple "pause" images.
 
 ## Initializing your control-plane node
 
