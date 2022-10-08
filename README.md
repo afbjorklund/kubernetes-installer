@@ -31,6 +31,9 @@ Components:
 6) Kubernetes dashboard [optional]
    - dashboard
    - metrics-server
+7) Building images [optional]
+   - nerdctl
+   - buildkit
 
 <https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/>
 
@@ -510,3 +513,9 @@ You will still get the "Kubelet certificate needs to be signed by cluster Certif
 $ KUBE_EDITOR="sed -i '/args:/ a\ \ \ \ \ \ \ \ - --kubelet-insecure-tls'" kubectl edit deployment -n kube-system metrics-server
 deployment.apps/metrics-server edited
 ```
+
+## Building images
+
+### Installing nerdctl
+
+### Installing buildkit
