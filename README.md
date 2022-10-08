@@ -333,7 +333,7 @@ To run more than one node, one can use the "flannel" CNI.
 Before adding a new CNI, make sure to remove any old CNI:
 
 ```
-rm -f /etc/cni/net.d/*.conf*
+rm -f /etc/cni/net/*.conf*
 ```
 
 When starting the control plane node, make ensure that podCIDR is set:
