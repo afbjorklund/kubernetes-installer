@@ -251,6 +251,20 @@ unpacking registry.k8s.io/etcd:3.5.4-0 (sha256:70effad8f559facab9a3f8315945c337b
 unpacking registry.k8s.io/coredns/coredns:v1.9.3 (sha256:26cb5368454cfa8ad8a0b982607bd154c15574f3722994a20eac3249eebf3c50)...done
 ```
 
+## Configuring node system
+
+### Disable swap
+
+`sudo swapoff -a`
+
+### Disable selinux
+
+`sudo setenforce Permissive`
+
+### Disable firewall
+
+`sudo systemctl stop firewalld`
+
 ## Configuring container runtime
 
 ### Install and configure prerequisites
