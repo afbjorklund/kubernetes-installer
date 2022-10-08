@@ -414,6 +414,13 @@ After the control plane is started, install the manifest:
 kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/v0.19.2/Documentation/kube-flannel.yml
 ```
 
+```
+docker.io/flannelcni/flannel-cni-plugin:v1.1.0
+docker.io/rancher/mirrored-flannelcni-flannel-cni-plugin:v1.1.0  # mirror
+docker.io/flannelcni/flannel:v0.19.2
+docker.io/rancher/mirrored-flannelcni-flannel:v0.19.2  # mirror
+```
+
 Make sure that the CoreDNS pods are _running_ correctly:
 
 ```
@@ -429,6 +436,7 @@ kubectl get pods --all-namespaces
 
 ```
 DASHBOARD_VERSION=v2.6.1
+METRICS_SCRAPER_VERSION=v1.0.8
 METRICS_SERVER_VERSION=v0.6.1
 ```
 
@@ -458,6 +466,13 @@ clusterrolebinding.rbac.authorization.k8s.io/system:metrics-server created
 service/metrics-server created
 deployment.apps/metrics-server created
 apiservice.apiregistration.k8s.io/v1beta1.metrics.k8s.io created
+```
+
+```
+docker.io/kubernetesui/dashboard:v2.6.1
+docker.io/kubernetesui/metrics-scraper:v1.0.8
+k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+registry.k8s.io/metrics-server/metrics-server:v0.6.1  # mirror
 ```
 
 ### Starting proxy and browser
