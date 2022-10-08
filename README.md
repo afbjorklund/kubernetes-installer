@@ -287,6 +287,15 @@ $ sudo sysctl --system
 
 Otherwise the cluster will crash after five minutes.
 
+```console
+$ containerd config default | grep SystemdCgroup
+            SystemdCgroup = false
+```
+
+Note: `systemd_cgroup` is for `io.containerd.runtime.v1.linux` runtime!
+
+Note: `SystemdCgroup` is for `runtime_type = "io.containerd.runc.v2"`.
+
 ### Overriding the sandbox (pause) image
 
 /etc/containerd/config.toml
@@ -296,6 +305,15 @@ Otherwise the cluster will crash after five minutes.
 ```
 
 Otherwise you will end up with multiple "pause" images.
+
+```console
+$ containerd config default | grep sandbox_image
+    sandbox_image = "k8s.gcr.io/pause:3.6"
+```
+
+Note: `k8s.gcr.io` was moved to `registry.k8s.io` with k8s 1.25
+
+Note: Currently the old registry is redirecting to the new one.
 
 ## Initializing your control-plane node
 
