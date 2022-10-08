@@ -83,6 +83,11 @@ Images:
 
 ## Installing a container runtime
 
+```
+CONTAINERD_VERSION=v1.6.8
+RUNC_VERSION=v1.1.4
+```
+
 ### containerd
 
 ```
@@ -153,6 +158,13 @@ Configure networking:
 `/etc/cni/net.d/10-containerd-net.conflist`
 
 ## Installing kubeadm, kubelet and kubectl
+
+https://dl.k8s.io/release/stable.txt
+
+```
+KUBERNETES_VERSION=v1.25.0
+RELEASE_VERSION=v0.4.0
+```
 
 ### kubeadm
 
@@ -331,6 +343,11 @@ This is useful for instance when not having any separate worker nodes available.
 When using "bridge" CNI, only a single node is possible.
 
 To run more than one node, one can use the "flannel" CNI.
+
+```
+FLANNEL_VERSION=v0.19.2
+FLANNEL_CNI_PLUGIN_VERSION=v1.1.0
+```
 
 ----
 
