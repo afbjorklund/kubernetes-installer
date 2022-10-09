@@ -23,6 +23,14 @@ Distribution:
  - systemd v251
  - yum (.rpm)
 
+Year   |  deb  |  rpm  |
+-------|-------|-------|
+2014   | 14.04 |  el7  |
+2016   | 16.04 |       |
+2018   | 18.04 |  el8  |
+2020   | 20.04 |       |
+2022   | 22.04 |  el9  |
+
 Components:
 
 1) Container runtime [required]
