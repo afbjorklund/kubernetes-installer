@@ -16,7 +16,12 @@ Distribution:
 1) Ubuntu 22.04 LTS (Jammy Jellyfish)
  - Linux v5.15
  - systemd v249
- - cloud-init v22
+ - apt (.deb)
+
+2) AlmaLinux 8.6 (Sky Tiger) [EL8]
+ - Linux v4.18
+ - systemd v239
+ - yum (.rpm)
 
 Components:
 
