@@ -11,6 +11,12 @@ Requirements:
   - 2 GiB or more of memory
   - 20 GiB or more of storage
 
+Distribution:
+
+1) Ubuntu 22.04 LTS (Jammy Jellyfish)
+ - Linux v5.15
+ - systemd v249
+ - cloud-init v22
 
 Components:
 
