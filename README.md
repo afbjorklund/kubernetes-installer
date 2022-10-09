@@ -522,6 +522,11 @@ deployment.apps/metrics-server edited
 
 ## Building images
 
+```
+NERDCTL_VERSION=v0.23.0
+BUILDKIT_VERSION=v0.10.4
+```
+
 ### Installing nerdctl
 
 ### Installing buildkit
