@@ -18,9 +18,9 @@ Distribution:
  - systemd v249
  - apt (.deb)
 
-2) AlmaLinux 8.6 (Sky Tiger) [EL8]
- - Linux v4.18
- - systemd v239
+2) AlmaLinux 9.0 (Emerald Puma) [el9]
+ - Linux v5.14
+ - systemd v251
  - yum (.rpm)
 
 Components:
