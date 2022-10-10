@@ -23,14 +23,6 @@ Distribution:
  - systemd v251
  - yum (.rpm)
 
-Year   |  deb  |  rpm  |
--------|-------|-------|
-2014   | 14.04 |  el7  |
-2016   | 16.04 |       |
-2018   | 18.04 |  el8  |
-2020   | 20.04 |       |
-2022   | 22.04 |  el9  |
-
 Components:
 
 1) Container runtime [required]
@@ -104,6 +96,26 @@ $ free -m
 Mem:            3927         132        3348           3         445        3577
 Swap:              0           0           0
 ```
+
+## Distribution timeline
+
+Originally these guides were using Ubuntu 16.04 LTS "xenial".
+
+Or perhaps the older CentOS 7, and with the Docker runtime.
+
+Year   |  deb  |  rpm  |
+-------|-------|-------|
+2014   | 14.04 |  el7  |
+2016   | 16.04 |       |
+2018   | 18.04 |  el8  |
+2020   | 20.04 |       |
+2022   | 22.04 |  el9  |
+
+Now using newer operating systems, and containerd runtime.
+
+Also cgroups v2 is now the Linux default, instead of cgroups v1.
+
+<https://kubernetes.io/blog/2018/05/24/kubernetes-containerd-integration-goes-ga/>
 
 ## Installing a container runtime
 
