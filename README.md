@@ -555,4 +555,17 @@ BUILDKIT_VERSION=v0.10.4
 
 ### Installing nerdctl
 
+```
+/usr/local/bin/nerdctl
+```
+
 ### Installing buildkit
+
+```
+/usr/local/bin/buildkitd
+
+/usr/local/lib/systemd/buildkit.service
+```
+
+Low-level client:
+`/usr/local/bin/buildctl`
