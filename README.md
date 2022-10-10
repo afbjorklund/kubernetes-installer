@@ -58,7 +58,8 @@ Packages:
 9.1M    kubectl-1.25.0-amd64.txz
 19M     kubelet-1.25.0-amd64.txz
 2.6M    runc-1.1.4-amd64.txz
-104M    total
+7.9M    nerdctl-0.23.0-amd64.txz
+25M     buildkit-0.10.4-amd64.txz
 ```
 
 Images:
